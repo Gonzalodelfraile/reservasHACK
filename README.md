@@ -1164,9 +1164,9 @@ Output: HomeViewModel.kt estructura completa en 2 segundos
 
 ### Contacto / Créditos
 
-- **Desarrollador**: [Tu Nombre]
+- **Desarrollador**: [Gonzalo del Fraile]
 - **Universidad**: Universidad Católica de Murcia (UCAM)
-- **Asignatura**: [Nombre Asignatura]
+- **Asignatura**: [Aplicaciones para Dispositivos]
 - **Fecha**: Enero 2025
 - **Versión**: 1.0
 
