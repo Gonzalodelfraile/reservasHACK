@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Description">
+    <meta name="author" content="Binarideas">
+    <link rel="icon" href="https://reservas.ucam.edu/img/favicon.ico">
+    <meta name="robots" content="noindex">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="sE0eYzeZnBQqoh3cCgh75OCkQedhOMIxKkSrGNIz">
+    <link rel="icon" href="https://reservas.ucam.edu/img/clients/ucam/favicon32.png" sizes="32x32" />
+    <link rel="icon" href="https://reservas.ucam.edu/img/clients/ucam/favicon192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://reservas.ucam.edu/img/clients/ucam/favicon180.png" />
+    <meta name="msapplication-TileImage" content="https://reservas.ucam.edu/img/clients/ucam/favicon270.png" />
+    <title>Take a spot | Reserva de espacios para empresas</title>
+
+    <script src="https://reservas.ucam.edu/assets/js/myturn-base.js?v=0.96-695c1445"></script>
+    <script src="https://reservas.ucam.edu/assets/js/myturn-datamatic.js?v=0.96-695c1445"></script>
+
+
+    <style>
+        template {
+                display: none;
+        }
+        .pace {
+                -webkit-pointer-events: none;
+                pointer-events: none;
+
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+
+                overflow: hidden;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 2000;
+                width: 100%;
+                height: 12px;
+                background: #fff;
+        }
+
+        .pace-inactive {
+                display: none;
+        }
+
+        .pace .pace-progress {
+                background-color: #004379;
+                position: fixed;
+                top: 0;
+                right: 100%;
+                width: 100%;
+                height: 12px;
+                overflow: hidden;
+
+                -webkit-border-radius: 0 0 4px 0;
+                -moz-border-radius: 0 0 4px 0;
+                -o-border-radius: 0 0 4px 0;
+                border-radius: 0 0 4px 0;
+                                         -webkit-box-shadow: inset -1px 0 #666c72, inset 0 -1px #666c72, inset 0 2px rgba(255, 255, 255, 0.5), inset 0 6px rgba(255, 255, 255, .3);
+                -moz-box-shadow: inset -1px 0 #666c72, inset 0 -1px #666c72, inset 0 2px rgba(255, 255, 255, 0.5), inset 0 6px rgba(255, 255, 255, .3);
+                -o-box-shadow: inset -1px 0 #666c72, inset 0 -1px #666c72, inset 0 2px rgba(255, 255, 255, 0.5), inset 0 6px rgba(255, 255, 255, .3);
+                box-shadow: inset -1px 0 #666c72, inset 0 -1px #666c72, inset 0 2px rgba(255, 255, 255, 0.5), inset 0 6px rgba(255, 255, 255, .3);
+        }
+        .pace .pace-activity {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: -28px;
+                bottom: 0;
+                height: 12px;
+                -webkit-background-image: radial-gradient(rgba(255, 255, 255, .65) 0%, rgba(255, 255, 255, .15) 100%);
+                -moz-background-image: radial-gradient(rgba(255, 255, 255, .65) 0%, rgba(255, 255, 255, .15) 100%);
+                -o-background-image: radial-gradient(rgba(255, 255, 255, .65) 0%, rgba(255, 255, 255, .15) 100%);
+                background-image: radial-gradient(rgba(255, 255, 255, .65) 0%, rgba(255, 255, 255, .15) 100%);
+
+                -webkit-background-size: 28px 100%;
+                -moz-background-size: 28px 100%;
+                -o-background-size: 28px 100%;
+                background-size: 28px 100%;
+
+                -webkit-animation: pace-theme-mac-osx-motion 500ms linear infinite;
+                -moz-animation: pace-theme-mac-osx-motion 500ms linear infinite;
+                -ms-animation: pace-theme-mac-osx-motion 500ms linear infinite;
+                -o-animation: pace-theme-mac-osx-motion 500ms linear infinite;
+                animation: pace-theme-mac-osx-motion 500ms linear infinite;
+        }
+
+        @-webkit-keyframes pace-theme-mac-osx-motion {
+                0% { -webkit-transform: none; transform: none; }
+                100% { -webkit-transform: translate(-28px, 0); transform: translate(-28px, 0); }
+        }
+        @-moz-keyframes pace-theme-mac-osx-motion {
+                0% { -moz-transform: none; transform: none; }
+                100% { -moz-transform: translate(-28px, 0); transform: translate(-28px, 0); }
+        }
+        @-o-keyframes pace-theme-mac-osx-motion {
+                0% { -o-transform: none; transform: none; }
+                100% { -o-transform: translate(-28px, 0); transform: translate(-28px, 0); }
+        }
+        @-ms-keyframes pace-theme-mac-osx-motion {
+                0% { -ms-transform: none; transform: none; }
+                100% { -ms-transform: translate(-28px, 0); transform: translate(-28px, 0); }
+        }
+        @keyframes  pace-theme-mac-osx-motion {
+                0% { transform: none; transform: none; }
+                100% { transform: translate(-28px, 0); transform: translate(-28px, 0); }
+        }
+
+    </style>
+    <!-- Fonts -->
+
+
+    <!-- Styles -->
+    <link href="https://reservas.ucam.edu/assets/css/myturn.css?v=0.96-695c1445" rel="stylesheet">
+    <link href="https://reservas.ucam.edu/assets/css/clients/ucam/ucam.css?id=42cc4ffab9ec8974834c?v=0.96-695c1445" rel="stylesheet">
+    <link href="https://reservas.ucam.edu/assets/css/myturn-datamatic.css?v=0.96-695c1445" rel="stylesheet">
+    <link href="https://reservas.ucam.edu/assets/css/myturn-pdf.css?v=0.96-695c1445" rel="stylesheet">
+</head>
+<body class="app_main" data-section="misreservas" data-role="user">
+<header class="has-text-centered">
+    <div class="infobar columns is-centered is-mobile is-vcentered mr-0 ml-0">
+        <div class="column is-pulled-left is-narrow back pl-1">
+            <a href="javascript:window.history.back()"><span class="oi" data-glyph="chevron-left"></span></a>
+        </div>
+        <div class="column is-wide titlec">
+            UCAM
+        </div>
+        <div class="column is-pulled-right is-narrow langselect">
+            <div class="dropdown is-right">
+                <div class="dropdown-trigger">
+                    <a class="button is-small" href="javascript:void(0)"> Español <span class="oi" data-glyph="chevron-bottom"></span></a>
+                </div>
+                <div class="dropdown-menu" id="dropdown-languages" role="menu">
+                    <div class="dropdown-content">
+                        <a href="https://reservas.ucam.edu/bookings?lang=en" class="dropdown-item">
+                            English
+                        </a>
+                        <a href="https://reservas.ucam.edu/bookings?lang=fr" class="dropdown-item">
+                            Français
+                        </a>
+                        <a href="https://reservas.ucam.edu/bookings?lang=de" class="dropdown-item">
+                            Deutsche
+                        </a>
+                        <a href="https://reservas.ucam.edu/bookings?lang=ca" class="dropdown-item">
+                            Valencià/Català
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column is-pulled-right is-narrow profile mr-0 pr-1">
+            <div class="dropdown is-right">
+                <div class="dropdown-trigger">
+                    <a href="javascript:void(0)">
+                        <img src="https://reservas.ucam.edu/img/panel/default_avatar.png" />
+                    </a>
+                </div>
+                <div class="dropdown-menu" id="dropdown-profile" role="menu">
+                    <div class="dropdown-item info-name">
+                        <p>Gonzalo -</p>
+                    </div>
+                    <hr class="dropdown-divider">
+                    <div class="dropdown-content">
+                        <a href="https://reservas.ucam.edu/profile/edit-profile" class="dropdown-item">
+                            Editar perfil
+                        </a>
+                    </div>
+                    <hr class="dropdown-divider">
+                    <div class="dropdown-content">
+                        <a href="https://reservas.ucam.edu/logout" class="dropdown-item">
+                            Cerrar sesión
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <nav class="level">
+        <div class="mobile-phone"><img src="https://reservas.ucam.edu/img/clients/ucam/logo_web.png" class="logoimage" alt="Take a spot" ></div>
+        <div class="navbar-brand">
+            <!-- navbar items, navbar burger... -->
+            <a role="button" class="navbar-burger-container" data-target="burgerMenu" aria-label="menu" aria-expanded="false">
+                <div class="navbar-burger-prev has-text-left">
+                    Menú
+                </div>
+                <div class="navbar-burger">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </div>
+            </a>
+        </div>
+
+        <div class="navbar-menu burger-menu" id="burgerMenu">
+            <div class="burger-menu-container">
+                <ul>
+                    <li class="level-item has-text-left">
+                        <a href="https://reservas.ucam.edu/myturner" class="link menu-item ">Inicio</a>
+                    </li>
+                    <li class="level-item has-text-left">
+                        <a href="https://reservas.ucam.edu/bookings" class="link menu-item menu-active">Mis reservas</a>
+                    </li>
+
+                    <li class="level-item has-text-left">
+                        <a href="https://reservas.ucam.edu/logout" class="link menu-item">Cerrar sesión</a>
+                    </li>
+                    <li class="level-item has-text-left">
+                        <a href="https://www.myturn.es/#demo" class="link menu-item">Contacto</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-menu main-menu ">
+            <p class="level-item has-text-centered">
+                <a href="https://reservas.ucam.edu/myturner" class="link menu-item ">Inicio</a>
+            </p>
+            <p class="level-item has-text-centered">
+                <a href="https://reservas.ucam.edu/bookings" class="link menu-item menu-active">Mis reservas</a>
+            </p>
+            <p class="level-item has-text-centered">
+                <img src="https://reservas.ucam.edu/img/clients/ucam/logo_web.png" class="logoimage" alt="Take a spot" >
+            </p>
+
+            <p class="level-item has-text-centered">
+                <a href="https://reservas.ucam.edu/logout" class="link menu-item">Cerrar sesión</a>
+            </p>
+            <p class="level-item has-text-centered">
+                <a href="https://www.myturn.es/#demo" class="link menu-item">Contacto</a>
+            </p>
+
+        </div>
+    </nav>
+</header>
+<div id="page-container">
+    <div class="loader-wrapper">
+        <div class="loader is-loading"></div>
+    </div>
+    <div id="myturnModal" class="modal modal-fx-fadeInScale">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head is-hidden">
+                <p class="modal-card-title"></p>
+            </header>
+            <section class="modal-card-body" id="myturnModalContent">
+
+            </section>
+            <footer class="modal-card-foot">
+                <button aria-action="ignore" class="button">Cerrar</button>
+            </footer>
+        </div>
+    </div>
+
+    <div id="myturnQuestionModal" class="modal modal-fx-fadeInScale">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head is-hidden">
+                <p class="modal-card-title"></p>
+            </header>
+            <section class="modal-card-body" id="myturnQuestionModalContent">
+
+            </section>
+            <footer class="modal-card-foot">
+                <button aria-action="yes" class="button is-primary">Confirmar</button>
+                <button aria-action="ignore" class="button">Cerrar</button>
+            </footer>
+        </div>
+    </div>
+    <div id="myturnDialogModal" class="modal sub modal-fx-fadeInScale">
+        <div class="modal-background sub"></div>
+        <div class="modal-card sub">
+            <header class="modal-card-head is-hidden">
+                <p class="modal-card-title"></p>
+            </header>
+            <section class="modal-card-body" id="myturnDialogModalContent">
+
+            </section>
+            <footer class="modal-card-foot">
+                <button aria-action="yes" class="button is-primary">Confirmar</button>
+                <button aria-action="ignore" class="button">Cerrar</button>
+            </footer>
+        </div>
+    </div>
+
+    <div id="myturnImageModal" class="modal modal-fx-fadeInScale">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <section class="modal-card-body px-0 py-0" id="myturnImageModalContent"></section>
+        </div>
+        <button class="modal-close is-large" aria-label="close" aria-action="ignore"></button>
+    </div>
+    <section>
+        <div id="cwrapper">
+            <article class="bookings-list">
+                <div id="myturn-content-wrapper">
+                    <div class="columns is-multiline is-fullwidth mt-1">
+                        <div class="column is-half is-full-mobile pt-0">
+                            <h1 id="bookings-title">Mis reservas
+                            </h1>
+                        </div>
+                        <div class="column is-half is-full-mobile has-text-right-tablet pt-0">
+                        </div>
+                    </div>
+                    <div id="bookings-list-container">
+                        <ul class="responsive-table">
+                            <li class="table-header">
+                                <div class="col col-1">Hora</div>
+                                <div class="col col-3">Reserva</div>
+                                <div class="col col-4 atr-duration">Duración</div>
+                                <div class="col col-5 atr-people">Ocupación</div>
+                                <div class="col col-2">Usuario</div>
+                                <div class="col col-6">Estado</div>
+                                <div class="col col-7">Acciones</div>
+                            </li>
+                            <li class="table-date-header">
+                                <div class="col col-full">Miércoles, 07/01/2026</div>
+                            </li>
+                            <li class="pb-3 table-row" data-id="3284729"
+                            >
+                                <div class="col col-1" data-label="Hora"><div class="hour-container has-text-centered"> <span class="fromtime">
+				08:30
+						</span><span class="septime">&#8942;</span><span class="totime">
+										10:30
+						</span>
+                                </div></div>
+                                <div class="col col-3 booking-l" data-label="Reserva"> BIBLIOTECA MURCIA
+                                    <p>Fila 11 - Mesa 11</p>
+                                </div>
+
+                                <div class="col col-4 atr-duration" data-label="Duración">
+                                    2h 0min
+                                </div>
+                                <div class="col col-5 has-text-centered atr-people" data-label="Personas">
+                                    1
+                                    <small>Persona</small>
+                                </div>
+                                <div class="col col-2" data-search="1" data-label="Usuario"><div>
+                                    Gonzalo -
+                                </div></div>
+                                <div class="col col-6" data-label="Estado">
+                                    Aceptado
+                                </div>
+                                <div class="cole col-7 buttons is-centered" data-label="Acciones">
+
+                                    <button type="button" data-action="booking-cancel" data-attributes="" data-id="3284729" class="button is-small is-danger">
+                                        Cancelar
+                                    </button>
+
+
+
+                                </div>
+                            </li>
+                            <li class="pb-3 table-row" data-id="3284730"
+                            >
+                                <div class="col col-1" data-label="Hora"><div class="hour-container has-text-centered"> <span class="fromtime">
+				10:30
+						</span><span class="septime">&#8942;</span><span class="totime">
+										12:30
+						</span>
+                                </div></div>
+                                <div class="col col-3 booking-l" data-label="Reserva"> BIBLIOTECA MURCIA
+                                    <p>Fila 11 - Mesa 11</p>
+                                </div>
+
+                                <div class="col col-4 atr-duration" data-label="Duración">
+                                    2h 0min
+                                </div>
+                                <div class="col col-5 has-text-centered atr-people" data-label="Personas">
+                                    1
+                                    <small>Persona</small>
+                                </div>
+                                <div class="col col-2" data-search="1" data-label="Usuario"><div>
+                                    Gonzalo -
+                                </div></div>
+                                <div class="col col-6" data-label="Estado">
+                                    Aceptado
+                                </div>
+                                <div class="cole col-7 buttons is-centered" data-label="Acciones">
+
+                                    <button type="button" data-action="booking-cancel" data-attributes="" data-id="3284730" class="button is-small is-danger">
+                                        Cancelar
+                                    </button>
+
+
+
+                                </div>
+                            </li>
+                            <li class="pb-3 table-row" data-id="3284731"
+                            >
+                                <div class="col col-1" data-label="Hora"><div class="hour-container has-text-centered"> <span class="fromtime">
+				12:30
+						</span><span class="septime">&#8942;</span><span class="totime">
+										14:30
+						</span>
+                                </div></div>
+                                <div class="col col-3 booking-l" data-label="Reserva"> BIBLIOTECA MURCIA
+                                    <p>Fila 11 - Mesa 11</p>
+                                </div>
+
+                                <div class="col col-4 atr-duration" data-label="Duración">
+                                    2h 0min
+                                </div>
+                                <div class="col col-5 has-text-centered atr-people" data-label="Personas">
+                                    1
+                                    <small>Persona</small>
+                                </div>
+                                <div class="col col-2" data-search="1" data-label="Usuario"><div>
+                                    Gonzalo -
+                                </div></div>
+                                <div class="col col-6" data-label="Estado">
+                                    Aceptado
+                                </div>
+                                <div class="cole col-7 buttons is-centered" data-label="Acciones">
+
+                                    <button type="button" data-action="booking-cancel" data-attributes="" data-id="3284731" class="button is-small is-danger">
+                                        Cancelar
+                                    </button>
+
+
+
+                                </div>
+                            </li>
+                            <li class="pb-3 table-row" data-id="3284733"
+                            >
+                                <div class="col col-1" data-label="Hora"><div class="hour-container has-text-centered"> <span class="fromtime">
+				14:30
+						</span><span class="septime">&#8942;</span><span class="totime">
+										16:30
+						</span>
+                                </div></div>
+                                <div class="col col-3 booking-l" data-label="Reserva"> BIBLIOTECA MURCIA
+                                    <p>Fila 11 - Mesa 11</p>
+                                </div>
+
+                                <div class="col col-4 atr-duration" data-label="Duración">
+                                    2h 0min
+                                </div>
+                                <div class="col col-5 has-text-centered atr-people" data-label="Personas">
+                                    1
+                                    <small>Persona</small>
+                                </div>
+                                <div class="col col-2" data-search="1" data-label="Usuario"><div>
+                                    Gonzalo -
+                                </div></div>
+                                <div class="col col-6" data-label="Estado">
+                                    Aceptado
+                                </div>
+                                <div class="cole col-7 buttons is-centered" data-label="Acciones">
+
+                                    <button type="button" data-action="booking-cancel" data-attributes="" data-id="3284733" class="button is-small is-danger">
+                                        Cancelar
+                                    </button>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</div>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            &copy; 2026 TakeASpot. Todos los derechos reservados
+
+        </p>
+    </div>
+</footer>
+<script src="https://reservas.ucam.edu/assets/js/myturn-lib.js?v=0.96-695c1445"></script>
+<script src="https://reservas.ucam.edu/assets/js/myturn-core.js?v=0.96-695c1445"></script>
+<script src="https://reservas.ucam.edu/assets/js/modules/dp-calendar.js"></script>
+
+<template id="myturn-modal-message">
+    Ha habido un problema:  {{ modal.message }}
+</template>
+<template id="myturn-modal-empty">
+    {{ modal.message }}
+</template>
+<template id="myturn-modal-empty-dyn">
+    {{{ modal.message }}}
+</template>
+<template id="myturn-modal-attendees">
+    <p> Asistentes registrados: </p>
+    <div class="columns is-mobile is-multiline mt-4">
+        {{#each modal.data.names }}
+        {{#if ../modal.data.additional }}
+        <div class="column is-half mb-1">
+            {{ this.name }}
+        </div>
+        <div class="column is-half mb-1">
+            {{#if this.other}}
+            <div>
+                <small>
+                    {{ capitalize  ../modal.data.additional }}
+                </small>
+                {{ this.other }}
+            </div>
+            {{/if}}
+            {{#each ../modal.data.extra  }}
+            <div>
+                <small>
+                    {{ capitalize this }}
+                </small>
+                {{#with (lookup ../this.extra @key)}}
+                {{ this }}
+                {{/with}}
+            </div>
+            {{/each }}
+        </div>
+        {{ else }}
+        <div class="column is-full mb-1">
+            {{ this.name }}
+        </div>
+        {{/if }}
+        {{/each}}
+        {{#if modal.bookingInfo }}
+        <p>Datos de la reserva:</p>
+        <div class="column is-half mb-1">sss
+            {{#each modal.bookingInfo  }}
+            <div>
+                <small>
+                    {{ capitalize this.title }}
+                </small>
+                <strong>
+                    {{#if this.value  }}
+                    {{ this.value }}
+                    {{ else }}
+                    Undefined
+                    {{/if }}
+                </strong>
+            </div>
+            {{/each }}
+        </div>
+        {{/if }}
+    </div>
+</template>
+<template id="myturn-modal-onbehalf">
+    <div id="myturn-select-behalf">
+        <p>¿Para quién es esta reserva? </p>
+        <div class="field">
+            <div class="control">
+                <button class="button is-fullwidth" data-action="sel-behalf" data-id="sel-for-me">Para mí</button>
+            </div>
+        </div>
+        <div class="field">
+            <div class="control">
+                <button class="button is-fullwidth" data-action="sel-behalf" data-id="sel-someone-else">Para otra persona</button>
+            </div>
+        </div>
+        <div class="field is-hidden is-user-selector columns is-multiline">
+            <div class="column is-9-desktop is-full-mobile">
+                <div class="control">
+                    <select id="onbehalf_user_select" placeholder="Selecciona un usuario">
+                    </select>
+                </div>
+            </div>
+            <div class="column is-3-desktop is-full-mobile">
+                <button class="button is-primary is-fullwidth" data-action="behalf-booking">Continuar</button>
+            </div>
+        </div>
+    </div>
+</template>
+<template id="myturn-modal-canteen">
+    <div class="container">
+        <!-- Información general de la reserva -->
+        <div class="box">
+            <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <h3 class="title is-4">Su reserva</h3>
+                        <p>
+                            <strong>Fecha:</strong> <span id="fecha-reserva">{{ modal.fullDate }}</span><br>
+                            <strong>Hora:</strong> <span id="hora-reserva">{{ modal.fullTime }}</span><br>
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- Lista de platos pedidos -->
+        <div class="box">
+            {{#each modal.data.names }}
+            {{#if ../modal.data.additional }}
+            {{#each ../modal.data.extra  }}
+            <div>
+                <h4 class="title is-5 mb-1">{{ capitalize this }}</h4>
+                {{#with (lookup ../this.extra @key)}}
+                <p class="mb-4">{{ this }}</p>
+                {{/with}}
+            </div>
+            {{/each }}
+            {{/if}}
+            {{/each}}
+        </div>
+    </div>
+</template>
+<template id="myturn-modal-booking-change">
+    <div id="bookingChangeDialog">
+        <div class="loader-wrapper">
+            <div class="loader is-loading"></div>
+        </div>
+        <h2>Cambia tu reserva</h2>
+        <div class="customInfo"></div>
+        <div class="time-selector">
+            <ul class="columns is-multiline is-mobile">
+            </ul>
+        </div>
+        <div class="no-time-selector">
+            Lo sentimos, no hay cambios disponibles
+        </div>
+    </div>
+</template>
+<template id="myturn-modal-booking-change-time">
+    <li class="time column is-half-mobile is-one-quarter-desktop is-one-third-tablet has-text-centered"><a class="button is-primary" href="javascript:void(0)" data-slot="{{ data.slot }}" data-action="{{ data.action }}">{{{ data.caption }}}</a></li>
+</template>
+<template id="myturn-modal-get-report">
+    <div id="bookingReportDownload">
+        <div class="loader-wrapper">
+            <div class="loader is-loading"></div>
+        </div>
+        <h2>Descargar informe</h2>
+        <div class="customInfo"></div>
+        <div class="form-control">
+            <div class="calendar is-hidden"></div>
+            <div class="message error is-danger is-hidden">
+                <div class="message-body">
+
+                </div>
+            </div>
+            <div class="control mb-2">
+                <input type="text" class="input" name="date-from" data-type="date" readonly="readonly" placeholder="Fecha de inicio" />
+            </div>
+            <div class="control mb-2">
+                <input type="text" class="input" name="date-to" data-type="date" readonly="readonly" placeholder="Fecha de fin" />
+            </div>
+        </div>
+    </div>
+</template>
+<template id="myturn-modal-confirm-delete">
+    <div id="bookingReportDownload">
+        <div class="loader-wrapper">
+            <div class="loader is-loading"></div>
+        </div>
+        <h2>Confirma borrado</h2>
+        <div class="customInfo"></div>
+        <div class="form-control">
+            <div class="message error is-danger is-hidden">
+                <div class="message-body">
+                </div>
+            </div>
+            Por favor, confirma que deseas borrar a este usuario:
+            <p id="userToDelete"></p>
+        </div>
+    </div>
+</template>
+<template id="myturn-latest-leave-records">
+    <h3 class="is-size-5">Úlitmos registros</h3>
+    <ul class="responsive-table">
+        <li class="table-header">
+            <div class="col col-2">Salida</div>
+            <div class="col col-2">Entrada</div>
+            <div class="col col-2">Notas</div>
+            <div class="col col-1">Acciones</div>
+        </li>
+        {{#each penalties}}
+        <li class="table-row pb-3" data-id="{{ this.id }}">
+            <div class="col col-2" data-label="Salida">{{ this.date }}</div>
+            <div class="col col-2" data-label="Entrada">{{ this.datein }}</div>
+            <div class="col col-2" data-label="Notas">{{ this.notes }}</div>
+            <div class="col col-1" data-label="Acciones">
+                {{#if this.candelete }}
+                <a href="javascript:void(0)" data-action="delete" data-id="{{ this.id }}"><span class="oi" data-glyph="trash"></span></a>
+                {{/if}}
+                {{#if this.canedit }}
+                <a href="javascript:void(0)" data-action="edit" data-id="{{ this.id }}"><span class="oi" data-glyph="pencil"></span></a>
+                {{/if}}
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</template>
+<template id="myturn-modal-leave-complex">
+    <div id="leaveComplexDialog">
+        <div class="loader-wrapper">
+            <div class="loader is-loading"></div>
+        </div>
+        <h2 class="is-size-4">Salir de la residencia</h2>
+        <div class="customInfo">
+
+        </div>
+        <div class="message error is-danger is-hidden">
+            <div class="message-body">
+
+            </div>
+        </div>
+        <div id ="latest-leave-records">
+        </div>
+        <form>
+            <div class="columns">
+                <div class="column is-half">
+                    <div class="field">
+                        <label class="label" for="leaving_date" > Fecha de salida</label>
+                        <input id="leaving_date" class="input" placeholder="Fecha de salida" name="leaving_date" type="date">
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="field">
+                        <label class="label" for="leaving_time"> Hora de salida</label>
+                        <input id="leaving_time" class="input" placeholder="Hora de salida" name="leaving_time" type="time">
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-half">
+                    <div class="field">
+                        <label class="label" for="arriving_date" > Fecha de vuelta</label>
+                        <input id="arriving_date" class="input" placeholder="Fecha de vuelta" name="arriving_date" type="date">
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="field">
+                        <label class="label" for="arriving_time"> Hora de vuelta</label>
+                        <input id="arriving_time" class="input" placeholder="Hora de vuelta" name="arriving_time" type="time" value="00:00">
+                    </div>
+                </div>
+            </div>
+            <textarea required id="leaving_details" class="textarea" placeholder="Más detalles" rows="3" name="leaving_details" cols="50"></textarea>
+        </form>
+    </div>
+</template>
+<template id="myturn-modal-free-reservation">
+    <div id="freeReservationDialog">
+        <div class="loader-wrapper">
+            <div class="loader is-loading"></div>
+        </div>
+        <h2>Reserva libre</h2>
+        <div class="customInfo">
+            <p> Por favor, indique la hora de entrada y salida</p>
+        </div>
+        <div class="message error is-danger is-hidden">
+            <div class="message-body">
+
+            </div>
+        </div>
+        <form>
+            <div class="field">
+                <label class="label" for="start_at" > Empieza a las</label>
+                <input id="start_at_time" class="input" placeholder="Empieza a las" name="start_at_time" type="time">
+            </div>
+            <div class="field">
+                <label class="label" for="arriving_time"> Termina a las</label>
+                <input id="end_at_time" class="input" placeholder="Termina a las" name="end_at_time" type="time">
+            </div>
+        </form>
+    </div>
+</template>
+<template id="myturn-modal-image">
+    <img src="{{ modal.src }}" alt="{{ modal.alt }}" style="display: block;" />
+</template>
+<template id="myturn-booking-comment">
+    <p>{{{ comment }}}</p>
+</template>
+<template id="bina-message-basic">
+    <article class="message is-{{ type }}">
+        {{#if header}}
+        <div class="message-header">
+            <p>{{ header }}</p>
+            <button class="delete" aria-label="delete"></button>
+        </div>
+        {{/if}}
+        <div class="message-body">
+            {{{ body }}}
+        </div>
+    </article>
+</template>
+<template id="myturn-booking-details-allBookingDetails">
+    <div class="loader-wrapper">
+        <div class="loader is-loading"></div>
+    </div>
+    <div class="dyn-modal-content" data-template="bd-abd-content">
+    </div>
+</template>
+<template id="myturn-bd-abd-content" >
+    <h4 class="title is-4">Booking in: {{ facility }}</h4>
+    <div class="columns is-multiline">
+        <div class="column is-6">
+            <strong>Date and time:</strong> <span>{{ start_at }}</span>
+        </div>
+        <div class="column is-6">
+            <strong>Duración:</strong> <span>{{ duration }}</span>
+        </div>
+        {{#each extra}}
+        <div class="column is-6">
+            <strong>{{this.title}}:</strong> <span>{{this.value}}</span>
+        </div>
+        {{/each}}
+        <div class="column is-12">
+            <strong>Description:</strong>
+            {{ comment }}
+        </div>
+    </div>
+</template>
+<template id="inventory-assets-base">
+    <div id="assetListWrapper">
+        <div class="loader-wrapper">
+            <div class="loader is-loading"></div>
+        </div>
+        <div class="columns searchbox is-mobile is-multiline">
+            <div class="column text-search is-full-mobile is-two-fifths-desktop">
+                <div class="field">
+                    <div class="control">
+                        <input class="input" placeholder="Búsqueda por palabras clave" id="keyword_search" name="keyword" type="text" value="">
+                    </div>
+                </div>
+            </div>
+            <div class="column text-search is-full-mobile is-two-fifths-desktop">
+                <div class="select is-fullwidth">
+                    <select id="category_search" name="category"><option selected="selected" value="">Seleccione categoría</option><option value="9">FOTOGRAFÍA</option><option value="8">ILUMINACIÓN</option><option value="11">OTROS</option><option value="10">SONIDO</option><option value="7">VIDEO</option></select>
+                </div>
+            </div>
+        </div>
+        <div class="columns searchbox is-mobile is-multiline">
+            <div class="column text-search is-hidden-mobile is-one-fifth-desktop">
+                Fecha de recogida
+            </div>
+            <div class="column text-search is-full-mobile is-one-fifth-desktop">
+                <div class="field">
+                    <div class="control">
+                        <input class="input" placeholder="Select lend date" id="date-since" name="date-since" type="date">
+                    </div>
+                </div>
+            </div>
+            <div class="column text-search is-hidden-mobile is-one-fifth-desktop">
+                Fecha de devolución
+            </div>
+            <div class="column text-search is-full-mobile is-one-fifth-desktop">
+                <div class="field">
+                    <div class="control">
+                        <input class="input" placeholder="Select return date" id="date-until" name="date-until" type="date">
+                    </div>
+                </div>
+            </div>
+            <div class="column text-search is-full-mobile has-text-centered is-one-fifth-desktop has-text-right-mobile">
+                <div class="control">
+                    <button class="button is-primary" data-action="search-assets">Buscar</button>
+                </div>
+            </div>
+        </div>
+        <div class="columns is-multiline" id="assetList">
+
+        </div>
+    </div>
+</template>
+<template id="inventory-assets-element" >
+    <div class="column is-full asset-element" data-asset="{{ asset.id }}" data-type="{{ asset.typeid }}" data-count="1" data-availhash="{{ asset.availhash }}">
+        <div class="box hpr-relative">
+            <div class="loader-wrapper">
+                <div class="loader is-loading"></div>
+            </div>
+            <article class="media is-block-mobile">
+                <div class="media-left mobile-no-margin">
+                    <a href="javascript:void(0)" data-action="--borrow-start" data-facility="{{ asset.facid }}" data-id="{{ asset.id }}" data-typeid="{{ asset.typeid }}">
+                        <figure class="image is-128x128 mobile-is-fullwidth is-centered">
+                            <img src="/images/assets/{{ asset.id }}/{{ asset.image }}" alt="{{ asset.name }}">
+                        </figure>
+                    </a>
+                </div>
+                <div class="media-content">
+                    <div class="content columns is-mobile is-multiline mx-0 my-0">
+                        <div class="column is-half-desktop is-full-mobile">
+                            <p class="mb-0">
+                                <strong>{{ asset.name }}</strong></p>
+                            <ul class="columns mb-0 mt-0 pb-0 pt-0">
+                                <li class="column is-narrow mb-0 mt-0 ml-0"><span class="oi" data-glyph="home"></span> {{ asset.facname }}</li>
+                                <li class="column is-narrow mb-0 mt-0 ml-0"><span class="oi" data-glyph="wifi"></span> <span class="counter" data-role="counter">1</span></li>
+                            </ul>
+                            <p>
+                                {{{ asset.shortdesc }}}
+                            </p>
+
+                        </div>
+                        {{#if asset.available}}
+                        <div class="column is-half-desktop is-full-mobile">
+                            <p>Fecha de recogida: {{ asset.lend }} - {{ asset.lendendtime }}</p>
+                            <p>Fecha de devolución: {{ asset.return }} - {{ asset.returnendtime }}</p>
+                            <a href="javascript:void(0)" data-role="assetbook" data-assetid="{{ asset.id }}" data-lenddate="{{ asset.rlend }}" data-returndate="{{ asset.rreturn }}" data-sign="{{ asset.sign }}" class="button is-primary">Reservar</a>
+                        </div>
+                        {{ else }}
+                        <div class="column is-half-desktop is-full-mobile">
+                            No disponible
+                        </div>
+                        {{/if}}
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</template>
+<template id="inventory-facility-pickup" >
+    <div class="columns inventory-facility-pickup" id="inventory-facility-picker" >
+        <div class="column mobile-is-full desktop-is-half">
+            <div class="select is-fullwidth">
+                <select name="inv-facility-pickup" id="inv-facility-pickup" data-action="asset-select">
+                    <option value="value" >Cargando... </option>
+                </select>
+            </div>
+            <div class="inv-pickup-info">
+            </div>
+        </div>
+    </div>
+</template>
+<template id="inventory-borrow-resume" >
+    <div class="column is-full is-centered additional-data">
+        <p>You will pick up these assets:</p>
+        {{#each assets }}
+        <div class="columns is-vcentered">
+            <div class="column is-half pnumber">
+                <p>{{ this.name }}</p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{#if assetreturns}}
+    <div class="column is-full is-centered additional-data">
+        <p>Vas a devolver artículos en:</p>
+        <select name="asset_return_time" id="asset_return_time">
+            {{#each assetreturns }}
+            <option value="{{ this.id }}"> {{ this.title }}</option>
+            {{/each}}
+        </select>
+    </div>
+    {{/if}}
+</template>
+<template id="inventory-lending-info" >
+    <div class="lending-info has-text-centered">
+        <img src="/images/assets/{{ lending.asset_id }}/{{ lending.assetImage }}" alt="{{ lending.assetName }}">
+        <div class="columns is-mobile is-multiline has-text-left">
+            <div class="column is-5 pt-1 pb-1">Referencia: </div>
+            <div class="column is-7 pt-1 pb-1">{{ lending.reference }} </div>
+            <div class="column is-5 pt-1 pb-1">Producto: </div>
+            <div class="column is-7 pt-1 pb-1">{{ lending.assetName }} </div>
+            <div class="column is-5 pt-1 pb-1">Estado: </div>
+            <div class="column is-7 pt-1 pb-1">{{ lending.status }} </div>
+            <div class="column is-5 pt-1 pb-1">Fecha de recogida: </div>
+            <div class="column is-7 pt-1 pb-1">{{ lending.lend_date }} </div>
+            <div class="column is-5 pt-1 pb-1">Fecha de devolución: </div>
+            <div class="column is-7 pt-1 pb-1">{{ lending.ret_date }} </div>
+        </div>
+
+    </div>
+</template>
+<template id="inventory-pickup-dialog" >
+    <div id="inventory-delivery-list">
+        <div class="loader-wrapper">
+            <div class="loader is-loading"></div>
+        </div>
+        Selecciona elementos para entregar o marcar como no entregados
+        <ul class="inventory-delivery-list">
+            {{#each assets}}
+            <div class="columns is-mobile inventory-delivery-asset" data-id="{{ this.id }}">
+
+                <div class="column is-narrow inv-pk-asset-name">
+                    <p>{{ this.assetName }}</p>
+                    <p><small>Ref: {{ this.reference }}</small></p>
+                </div>
+                <div class="column is-narrow inv-pk-status">
+                    {{#if this.hstatus }}
+                    {{ this.hstatus }}
+                    {{ else }}
+                    {{ this.status }}
+                    {{/if }}
+                </div>
+                <div class="column is-narrow buttonbar">
+                    {{#when this.status_x '<=' 2 }}
+                    <button class="button is-small is-success" data-action="deliver-asset" data-id="{{ this.id }}">Entregar</button>
+                    {{#when this.status_x '!=' 2 }}
+                    <button class="button is-small is-danger" data-action="reject-delivery" data-id="{{ this.id }}">Rechazar</button>
+                    {{/when }}
+                    {{ else }}
+                    {{#when this.status_x '==' 4 }}
+                    <button class="button is-small is-danger" data-action="not-returned" data-id="{{ this.id }}">Sin devolución</button>
+                    {{/when}}
+                    {{#when this.status_x '==' 3 }}
+                    <button class="button is-small is-warning" data-action="return-asset" data-id="{{ this.id }}">Devolver</button>
+                    <button class="button is-small is-danger" data-action="not-delivered" data-id="{{ this.id }}">Not delivered</button>
+                    {{/when }}
+                    {{/when }}
+                </div>
+
+            </div>
+            {{/each}}
+        </ul>
+    </div>
+</template>
+<template id="inventory-item-buttonbar">
+    nothing here
+</template>
+<template id="inventory-pickup-element" >
+
+    <div class="column is-narrow inv-pk-asset-name">
+        <p>{{ asset.assetName }}</p>
+        <p><small>Ref: {{ asset.reference }}</small></p>
+    </div>
+    <div class="column is-narrow inv-pk-status">
+        {{ asset.status }}
+    </div>
+    <div class="column is-narrow">
+        {{#when asset.status_x '<=' 2 }}
+        <button class="button is-small is-success" data-action="deliver-asset" data-id="{{ asset.id }}">Entregar</button>
+        {{#when asset.status_x '!=' 2 }}
+        <button class="button is-small is-danger" data-action="reject-delivery" data-id="{{ asset.id }}">Rechazar</button>
+        {{/when }}
+        {{ else }}
+        {{#when asset.status_x '==' 4 }}
+        <button class="button is-small is-danger" data-action="not-returned" data-id="{{ asset.id }}">Sin devolución</button>
+        {{/when}}
+        {{#when asset.status_x '==' 3 }}
+        <button class="button is-small is-warning" data-action="return-asset" data-id="{{ asset.id }}">Devolver</button>
+        <button class="button is-small is-danger" data-action="not-delivered" data-id="{{ asset.id }}">Not delivered</button>
+        {{/when }}
+        {{/when }}
+    </div>
+</template>
+<template id="inventory-notify">
+    <div class="notification is-{{ type }} is-light">
+        {{ content }}
+    </div>
+</template>
+<template id="uptable-newelement-modal">
+    <div id="uptable-ne-modal">
+    </div>
+</template>
+<template id="uptable-form-field-text">
+    <label for="{{ id }}">{{ title }}<input class="input" type="text" name="{{ id }}" id="{{ id }}" value="{{ value }}" /></label>
+</template>
+<template id="uptable-form-field-checkbox">
+    <label for="{{ id }}" class="checkbox">
+        {{#if value }}
+        <input type="checkbox" name="{{ id }}" id="{{ id }}" checked="checked" />
+        {{else }}
+        <input type="checkbox" name="{{ id }}" id="{{ id }}" />
+        {{/if}}
+        {{ title }}</label>
+</template>
+<template id="uptable-form-field-date">
+    <label for="{{ id }}">{{ title }}<input class="input" type="date" name="{{ id }}" id="{{ id }}" value="{{ value }}" /></label>
+</template>
+<template id="uptable-form-field-select">
+    <div class="field">
+        <label for="{{ id }}">{{ title }}</label>
+        <div class="control">
+            <div class="select">
+                <select id="{{ id }}" name="{{ id }}">
+                    {{#each options }}
+                    {{#when this.id '==' ../value }}
+                    <option value="{{ this.id }}" selected="selected">{{ this.title }}</option>
+                    {{ else }}
+                    <option value="{{ this.id }}">{{ this.title }}</option>
+                    {{/when}}
+                    {{/each}}
+                </select>
+            </div>
+        </div>
+    </div>
+</template>
+<template id="lendings-table-header">
+    <li class="table-header">
+        <div class="col col-1"></div>
+        <div class="col col-3">Item</div>
+        <div class="col col-4">Entrega</div>
+        <div class="col col-5">Devolver</div>
+        <div class="col col-6">Estado</div>
+        <div class="col col-7">Acciones</div>
+    </li>
+</template>
+<template id="lendings-list-row">
+    <li class="table-row" data-id="{{id}}">
+        <div class="col col-1" data-label=""><img src="/images/assets/{{ asset_id }}/{{ image }}" /> </div>
+        <div class="col col-3" data-label="Item">{{ name }} <p class="ref"><small>Ref: {{ ref }}</small></p> </div>
+        <div class="col col-4" data-label="Entrega">{{ lstart }} - {{ lendhour }} <p><small>{{ lfac }}</small></p> </div>
+        <div class="col col-5" data-label="Devolver">{{ rstart }} - {{ rendhour }}<p><small>{{ rfac }}</small></p> </div>
+        <div class="col col-6" data-info="status" data-label="Estado">{{ hstatus }} </div>
+        <div class="col col-7" data-info="actions" data-label="Acciones">{{{ actions }}} </div>
+    </li>
+</template>
+<template id="lendings-list-actions">
+    {{#if capabilities.canCancel}}
+    <a href="javascript:void(0)" class="button is-primary" data-target="lending" data-id="{{ lending.id }}" data-action="cancel">Cancelar</a>
+    {{/if}}
+</template>
+<template id="manager_calc_show">
+    <div class="columns mt-3">
+        <div class="column is-3-desktop is-half-tablet">
+            <span class="manager-data-calc" data-code="{{ data.code }}"> {{ data.title }}</span>
+        </div>
+        <div class="column is-3-desktop is-half-tablet" style="{{#if data.color }}background: {{ data.color }}; color: {{ data.textColor }}; {{/if }}">
+            <span class="managet-data-calc-value" data-code="{{ data.code }}" data-val="{{ data.result }}">{{ data.result }}</span>
+        </div>
+    </div>
+</template>
+<template id="myturn-cancel-reason">
+    <p>Por favor, indica el motivo de la cancelación</p>
+    <div class="error notification is-hidden is-danger">
+    </div>
+    <div class="field">
+        <div class="control">
+            <input type="hidden" id="currentCancel" value="{{bookingId}}" />
+            <textarea id="cancelReason" class="textarea" style="height: 75px" placeholder="Escriba el motivo"></textarea>
+        </div>
+    </div>
+</template>
+<script type="text/javascript">
+    myturnStore.add('baseurl', "https:\/\/reservas.ucam.edu");
+                     myturnStore.add('username', "Gonzalo -");
+    myturnStore.add('useremail', "Z2RlbGZyYWlsZUBhbHUudWNhbS5lZHU=");
+    myturnStore.add('avatarUrl', "https:\/\/reservas.ucam.edu\/img\/panel\/default_avatar.png");
+                                                       myturnStore.add('inventory_enabled', true);
+                                      myturnLang.setLocale('es');
+    myturnLang.addM({
+            'serv_res_error'			: "Error en la respuesta del servidor",
+            'serv_conn_error'		: "Error contactando con el servidor.",
+            'noslotfound'				: "Couldn\'t find any free timeslot on the selected day",
+            'err_nw3002'					: "Error contactando con el servidor. NW3002.",
+            'err_nw3003'					: "Error contactando con el servidor. NW3003.",
+            'err_bk5001'					: "Couldn\'t read selected date. BK5004.",
+            'err_bk5002'					: "Error al realizar reserva. BK5002",
+            'err_bk5003'					: "Couldn\'t read selected hour. BK5003.",
+            'err_bk5004'					: "Couldn\'t read selected date. BK5004.",
+            'err_bk5005'					: "Ha ocurrido un problema. Por favor recargue la aplicación. BK5005.",
+            'err_bk5006'					: "Error inesperado al buscar la reserva. BK5006.",
+            'err_bk5007'					: "Error en la carga. Por favor, recargue la aplicación. BK5007",
+            'err_bk5008'					: "There\'s no booking identifier. BK5008.",/*  */
+            'err_bk5008'					: "There\'s no booking identifier. BK5008.",/*  */
+            'err_bk5010'					: "There\'s no booking identifier. BK5010.",/*  */
+            'err_bk5011'					: "Couldn\'t find necessary information. BK5011.",
+            'err_bk5014'					: "Couldn\'t find necessary information. BK5014.",
+            'err_bk5015'					: "No se encuentran parcelas. BK5015.",
+            'err_bk5016'					: "No se encuentran parcelas. BK5016.",
+            'err_bk5018'         : "There\'s no booking identifier. BK5018",
+            'err_bk5019'         : "No se ha cargado la información de acompañantes. BK5019",
+            'err_bk5020'         : "No template information. BK5020",
+            'err_bk5021'         : "No action information. BK5021",
+            'err_bk5022'         : "No element information. BK5022",
+            'err_bk5023'         : "No template information. BK5023",
+            'select_people'			: "Por favor, seleccione los acompañantes.",
+            'too_many_people'		: "Demasiadas personas seleccionadas",
+            'confirm_cancel'			: "Confirme que desea cancelar la reserva seleccionada",
+            'confirm_recover'    : "Confirm you want to recover the selected booking",
+            'confirm_payment'    : "Confirm you want to set selected booking as paid",
+            'confirm_cancel_event': "Confirm you want to cancel the selected event",
+            'confirm_cancel_asset'	: "Confirm you want to cancel the selected lending",
+            'payandbook'         : "Pago y reserva",
+            'confirm_accept'			: "Confirme que desea aceptar la reserva seleccionada",
+            'confirm'						: "Confirmar",
+            'door_opened'        : "Instalación abierta",
+            'door_closed'        : "Instalación cerrada",
+            'get_payment'        : "Pago",
+            'get_summary'        : "Resumen",
+            'services'           : "Services",
+            'err_nw3001'					: "Error al cargar servicios. NW3001.",
+            'err_nw3011'					: "Error al cargar servicios. NW3011.",
+            'err_nw3012'					: "Error al cargar servicios. NW3012.",
+            'err_nw3013'         : "Error loading service data. NW3013.",
+            'err_tp2001'					: "Fallo en la aplicación. TP2001.",
+            'err_tp2002'					: "Fallo en la aplicación. TP2002.",
+            'err_tp2003'					: "Fallo en la aplicación. TP2004.",
+            'err_tp2004'					: "Fallo en la aplicación. TP2004.",
+            'err_tp2003'					: "Hubo un error al cargar la información. TP2003.",
+            'err_tp2005'					: "Hubo un error al cargar la información. TP2005.",
+            'err_ht9001'					: "Error leyendo el valor del elemento. HT9001.",
+            'err_in5400'         : "Error loading inventory. IN5400.",
+            'err_in5401'         : "Error loading lending info. IN5401.",
+            'err_vo3001'         : "Error al cargar bono. VO3001.",
+            'err_cn7602'         : "Error loading data. CN7602.",
+            'err_pl8720'         : "No user data found. PL8720.",
+            'err_en6321'         : "No entry data response. EN6321.",
+            'err_en6322'         : "Wrong input data. EN6322.",
+            'err_od9238'         : "No door found.",
+            'err_od9239'         : "No door ID found.",
+            'err_od9240'         : "No facility ID found.",
+            'err_cn2982'         : "Error reading event. CN2982.",
+            'err_tc2112'         : "Wrong data. Please reload TC2112.",
+            'ue_oldSO'						: "Lo sentimos, su dispositivo utiliza una versión del sistema operativo muy antigua y no es soportada por Myturn.es.",
+            'ue_noservices'			: "No tiene servicios disponibles.",
+            'ue_nocheckrsv'			: "Couldn\'t verify your booking",
+            'errorhappen'				: "Hubo un problema",
+            'ue_nohour'					: "No se ha seleccionado la hora.",
+            'person'							: "persona",
+            'people'							: "personas",
+            'pitch'							: "parcela",
+            'pitches'						: "parcelas",
+'table'							: "table",
+'tables'							: "tables",
+            'sharedtable'        : "shared table",
+            'sharedtables'       : "shared tables",
+'resource'           : "resource",
+'resources'          : "resources",
+            'noattinfo'					: "No se ha registrado información de los asistentes",
+            'checkinsuccess'			: "Entrada registrada con éxito",
+             'checkoutsuccess'			: "Salida registrada con éxito",
+            'checkinsuccessmsg'	: "La entrada se ha registrado. Puedes cerrar esta ventana. Vuelve a escanear si alguien más de tu reserva entra o cuando vayáis a salir.",
+            'checkoutsuccessmsg'	: "La salida se ha registrado. Puedes cerrar esta ventanda. Si no marcaste \"no van a volver\" puedes escanear el código de nuevo para volver a registrar tu entrada.",
+            'nofacility'					: "Instalación no encontrada",
+            'nopeople'						: "Missing people information",
+            'noslot'							: "No time slot selected. Please, make a booking",
+            "confirm_illbelate"	: "Confirma que llegarás tarde a la cita",
+            "confirm_wontbelate"	: "Confirma que no llegarás tarde a la cita",
+            "illbelate"          : "Llegaré tarde",
+            "slot_error"         : "Invalid time slot",
+            "action_error"       : "Invalid action",
+            'totnumpe'           : "Número total de personas",
+            'totnumpi'           : "Número total de parcelas",
+            'totnumta'           : "Número total de mesas",
+            'totnumst'           : "Número total de mesas compartidas",
+            'totnumre'           : "Total number of resources",
+            'totnumsre'          : "Total number of shared resources",
+            'selectbetweenpi'    : "Puedes seleccionar una de estas parcelas",
+            'selectbetweenta'    : "Puedes seleccionar una de estas mesas",
+            'selectbetweentapn'  : "Select table for seat %seat%:",
+            'selectbetweenst'    : "Puedes elegir entre las siguientes mesas",
+            'selectbetweenre'    : "You can select between these resources",
+            'selectbetweensre'   : "You can select between these shared resources",
+            'cannotgoback'       : "You cannot go back",
+            'cannotgoforward'    : "No se puede mostrar más días",
+            'cannotloadlendings' : "Cannot load lendings",
+            'nopickp'           : "Sin recogida",
+            'accept'             : "Aceptar",
+            'home'             : "Inicio",
+            'status_pending'     : "Pendiente",
+            'status_rejected'    : "Rechazado",
+            'status_accepted'    : "Aceptado",
+            'status_lent'        : "Lent",
+            'status_returned'    : "Devuelto",
+            'status_complaint'   : "Complaint",
+            'no_pick_up'         : "Sin recogida",
+            'not_returned_yet'   : "Sin devolución",
+            'day'                : "Día",
+            'week'               : "Semana",
+            'never'              : "Nunca",
+'accept_terms'       : "Debes aceptar los términos y condiciones del servicio",
+            'cannot_find_doc'    : "Document not found",
+'Entry'              : "Entrada",
+'Exit'               : "Salida",
+'Unknown'            : "Desconocido",
+'status_problem'     : "Hubo un problema",
+            'already_loading'    : "Already loading assets. Please wait.",
+            'mybookings'         : "Mis reservas",
+            'mylendings'         : "My Lendings",
+            'bookings'           : "Reservas",
+            'lendings'           : "Prestamo",
+            'facilities'           : "Instalaciones",
+            'inventory'           : "Inventario",
+            'allbookings'        : "Todas las reservas",
+            'goingwithsomeone'        : "¿Vas a ir con alguien?",
+            'totalnumofp'        : "Número total de personas",
+            'congratulations'    : "¡Felicidades!",
+            'alllendings'        : "All Lendings",
+            'Start'              : "Inicio",
+            'End'              : "Fin",
+            'Occupation'              : "Ocupación",
+            'create_event'     : "Confirmar evento",
+            '_dateFormat'	 	 	  : "DD/MM/YYYY",
+            '_timeFormat'	 	 	  : "HH:mm",
+            '_dateTimeFormat' 	   : "DD/MM/YYYY HH:mm",
+            'err_entry_dia'      : "Hubo un problema cargando el diálogo. El estado actual del usuario no se puede leer. Por favor, habla con un administrador.",
+            'entry_registered'   : "Entrada registrada correctamente.",
+            'exit_registered'   : "Salida registrada correctamente.",
+            'ef_dtm'             : "Fecha y hora: %dtm%.",
+            'success_stored'     : "Data stored successfully.",
+            'notavailable'       : "No disponible.",
+            'confirm_delete_plate': "Confirm you want to delete the plate %plate%.",
+            'takenslot' : "Ocupado.",
+            'reservedslot' : "Reservado.",
+            'blockedslot' : "Bloqueado.",
+            'User':  "Usuario",
+            'mustfillreturn' :  "You must fill return date and time",
+            'mustfillleaving' :  "You must fill leaving date and time",
+            'confirmArrive':   "Por favor, confirma que acabas de llegar a las instalaciones",
+            'startendph' :    "Start: %start% - End: %end%",
+            'nochangeavailable':  "No change available.",
+            'cannot_edit':  "Cannot edit this entry.",
+            'cannot_delete':  "Cannot delete this entry.",
+            'confirm_tce_del':"Please confirm deletion of the entry since %since% until %until%.",
+            'register_entrance':"Registrar entrada",
+            'register_exit':"Registrar salida",
+            'entrance':"Entrada",
+            'exit':"Salida",
+            'gotoentrance': "Confirme la entrada al complejo. Cuando pulse confirmar se levantará la barrera.",
+            'gotoexit': "Confirme la salida. Cuando pulse confirmar, se levantará la barrera.",
+            'errconfirm': "Los parkings no se han cargado completamente. Por favor, recargue la aplicación.",
+            'errparkingaction': "Acción de parking no válida. Por favor, recarga la aplicación.",
+            'reason_mandatory': "Please specify the reason of cancellation.",
+            'MyTurn'					 	  : "MyTurn"
+    });
+
+                    myturnStore.add('asset_warehouse', []
+   );
+   MyTurn.inventory().lendingInfoEvents("user");
+</script>
+</body>
+</html>

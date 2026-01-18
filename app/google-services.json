@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "658075298116",
+    "project_id": "ucamreservas",
+    "storage_bucket": "ucamreservas.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658075298116:android:6a51cda54c8432984b0f11",
+        "android_client_info": {
+          "package_name": "edu.ucam.reservashack"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaJx7x6WAp9LP7SIZ9JHXGMSwvSarDfhk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
