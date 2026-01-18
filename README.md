@@ -332,7 +332,7 @@ viewModelScope.launch {
 #### 1. Clonar el Repositorio
 
 ```bash
-git clone <url-del-repositorio>
+git clone <Gonzalodelfraile/reservasHACK>
 cd reservashack
 ```
 
