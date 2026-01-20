@@ -332,7 +332,7 @@ viewModelScope.launch {
 #### 1. Clonar el Repositorio
 
 ```bash
-git clone <url-del-repositorio>
+git clone <Gonzalodelfraile/reservasHACK>
 cd reservashack
 ```
 
@@ -1164,9 +1164,9 @@ Output: HomeViewModel.kt estructura completa en 2 segundos
 
 ### Contacto / Créditos
 
-- **Desarrollador**: [Tu Nombre]
+- **Desarrollador**: [Gonzalo del Fraile]
 - **Universidad**: Universidad Católica de Murcia (UCAM)
-- **Asignatura**: [Nombre Asignatura]
+- **Asignatura**: [Aplicaciones para Dispositivos]
 - **Fecha**: Enero 2025
 - **Versión**: 1.0
 
