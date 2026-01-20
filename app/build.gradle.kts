@@ -26,8 +26,11 @@ android {
             isShrinkResources = true // Eliminar recursos no usados
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
+                "r8-rules.pro"
             )
+            // Configuración adicional de R8 para preservar información de tipos genéricos
+            buildConfigField("boolean", "DEBUG_MODE", "false")
         }
         debug {
             isMinifyEnabled = false
@@ -43,6 +46,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.8" // Compatible con Kotlin 1.9.22
@@ -87,6 +91,5 @@ dependencies {
     // 7. Firebase
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.firestore)
-    implementation(libs.firebase.analytics)
     implementation("com.google.firebase:firebase-auth-ktx") // Auth
 }

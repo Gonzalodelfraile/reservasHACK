@@ -24,6 +24,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.AddCircle
 import androidx.compose.material.icons.filled.List
@@ -58,7 +59,7 @@ import edu.ucam.reservashack.ui.screens.home.HomeScreen
 
 sealed class Screen(val route: String, val titleResId: Int, val icon: ImageVector) {
     object Home : Screen("home", R.string.nav_search, Icons.Default.AddCircle)
-    object MyBookings : Screen("my_bookings", R.string.nav_my_bookings, Icons.Default.List)
+    object MyBookings : Screen("my_bookings", R.string.nav_my_bookings, Icons.AutoMirrored.Filled.List)
     object Profile : Screen("profile", R.string.nav_profile, Icons.Default.AccountCircle)
 }
 

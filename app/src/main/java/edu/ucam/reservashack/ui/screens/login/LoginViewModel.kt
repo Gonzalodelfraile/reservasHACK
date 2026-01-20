@@ -74,7 +74,7 @@ class LoginViewModel @Inject constructor(
         }
     }
     
-    private suspend fun refreshExpiredAccount(accountId: String, cookieString: String, htmlContent: String?) {
+    private suspend fun refreshExpiredAccount(accountId: String, cookieString: String, @Suppress("UNUSED_PARAMETER") htmlContent: String?) {
         try {
             // Calcular cuándo expira la sesión (4.8 horas)
             val sessionExpiresAt = System.currentTimeMillis() + 17_400_000L
@@ -143,7 +143,7 @@ class LoginViewModel @Inject constructor(
         }
     }
     
-    private fun extractEmailFromHtml(html: String?): String? {
+    private fun extractEmailFromHtml(@Suppress("UNUSED_PARAMETER") html: String?): String? {
         // TODO: Parsear el HTML para extraer el email del usuario
         // Por ahora retornamos null
         return null

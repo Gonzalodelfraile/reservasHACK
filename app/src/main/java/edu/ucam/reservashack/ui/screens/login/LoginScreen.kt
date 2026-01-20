@@ -39,8 +39,8 @@ import kotlinx.coroutines.delay
 @Composable
 fun LoginScreen(
     viewModel: LoginViewModel = hiltViewModel(),
-    mode: String = "first_time",
-    accountId: String = "",
+    @Suppress("UNUSED_PARAMETER") mode: String = "first_time",
+    @Suppress("UNUSED_PARAMETER") accountId: String = "",
     onLoginSuccess: () -> Unit
 ) {
     var isWebViewVisible by remember { mutableStateOf(true) }

@@ -6,31 +6,41 @@ import edu.ucam.reservashack.domain.model.TableSlot
 import edu.ucam.reservashack.domain.model.TimeSlot
 
 data class ServicesResponse(
-    val data: List<ServiceDataDto>
-)
+    val data: List<ServiceDataDto> = emptyList()
+) {
+    constructor() : this(emptyList())
+}
 
 data class ServiceDataDto(
-    val id: Int,
-    val name: String?,
-    @SerializedName("properties") val properties: ServicePropertiesDto,
-    val timetable: Map<String, List<TimetableEntryDto>>?
-)
+    val id: Int = 0,
+    val name: String? = null,
+    @SerializedName("properties") val properties: ServicePropertiesDto = ServicePropertiesDto(),
+    val timetable: Map<String, List<TimetableEntryDto>>? = null
+) {
+    constructor() : this(0, null, ServicePropertiesDto(), null)
+}
 
 data class ServicePropertiesDto(
-    @SerializedName("total_pitches") val capacity: String,
-    @SerializedName("pitches_names") val pitches: List<PitchDto>
-)
+    @SerializedName("total_pitches") val capacity: String = "0",
+    @SerializedName("pitches_names") val pitches: List<PitchDto> = emptyList()
+) {
+    constructor() : this("0", emptyList())
+}
 
 data class PitchDto(
-    val name: String,
-    val status: String
-)
+    val name: String = "",
+    val status: String = ""
+) {
+    constructor() : this("", "")
+}
 
 data class TimetableEntryDto(
-    val open: String,
-    val close: String,
-    @SerializedName("_gbid") val gbid: String?
-)
+    val open: String = "",
+    val close: String = "",
+    @SerializedName("_gbid") val gbid: String? = null
+) {
+    constructor() : this("", "", null)
+}
 
 // Extension Function para convertir DTO a Domain
 fun ServiceDataDto.toDomain(): LibraryService {

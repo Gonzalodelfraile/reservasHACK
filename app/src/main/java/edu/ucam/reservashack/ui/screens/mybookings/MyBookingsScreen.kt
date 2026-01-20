@@ -23,8 +23,6 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import edu.ucam.reservashack.R
 import edu.ucam.reservashack.domain.model.MyBooking
 import edu.ucam.reservashack.domain.model.BookingStatus
-import com.google.accompanist.swiperefresh.SwipeRefresh
-import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import edu.ucam.reservashack.ui.shared.ErrorState
 import edu.ucam.reservashack.ui.theme.*
 
@@ -34,50 +32,43 @@ fun MyBookingsScreen(
 ) {
     val state by viewModel.state.collectAsState()
 
-    val isRefreshing = state is MyBookingsState.Loading
 
-    SwipeRefresh(
-        state = rememberSwipeRefreshState(isRefreshing = isRefreshing),
-        onRefresh = { viewModel.loadBookings() },
-        modifier = Modifier.fillMaxSize()
-    ) {
-        Box(modifier = Modifier.fillMaxSize()) {
-            when (val currentState = state) {
-                is MyBookingsState.Loading -> {
-                    CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
-                }
-                is MyBookingsState.Error -> {
-                    ErrorState(
-                        message = currentState.message,
-                        onRetry = { viewModel.loadBookings() },
-                        modifier = Modifier.fillMaxSize(),
-                        retryLabel = stringResource(R.string.retry)
-                    )
-                }
-                is MyBookingsState.Success -> {
-                    if (currentState.bookings.isEmpty()) {
-                        Column(
-                            modifier = Modifier.align(Alignment.Center),
-                            horizontalAlignment = Alignment.CenterHorizontally
-                        ) {
-                            Text(stringResource(R.string.no_active_reservations), style = MaterialTheme.typography.bodyMedium)
-                            Spacer(modifier = Modifier.height(8.dp))
-                            Button(onClick = { viewModel.loadBookings() }) {
-                                Text(stringResource(R.string.refresh), style = MaterialTheme.typography.labelLarge)
-                            }
+    Box(modifier = Modifier.fillMaxSize()) {
+        when (val currentState = state) {
+            is MyBookingsState.Loading -> {
+                CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
+            }
+            is MyBookingsState.Error -> {
+                ErrorState(
+                    message = currentState.message,
+                    onRetry = { viewModel.loadBookings() },
+                    modifier = Modifier.fillMaxSize(),
+                    retryLabel = stringResource(R.string.retry)
+                )
+            }
+            is MyBookingsState.Success -> {
+                if (currentState.bookings.isEmpty()) {
+                    Column(
+                        modifier = Modifier.align(Alignment.Center),
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        Text(stringResource(R.string.no_active_reservations), style = MaterialTheme.typography.bodyMedium)
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Button(onClick = { viewModel.loadBookings() }) {
+                            Text(stringResource(R.string.refresh), style = MaterialTheme.typography.labelLarge)
                         }
-                    } else {
-                        LazyColumn(
-                            contentPadding = PaddingValues(16.dp),
-                            verticalArrangement = Arrangement.spacedBy(12.dp)
-                        ) {
-                            items(currentState.bookings) { booking ->
-                                BookingItem(
-                                    booking = booking,
-                                    onCancel = { viewModel.cancelBooking(booking.id) },
-                                    onCheckin = { viewModel.checkinBooking(booking.id) }
-                                )
-                            }
+                    }
+                } else {
+                    LazyColumn(
+                        contentPadding = PaddingValues(16.dp),
+                        verticalArrangement = Arrangement.spacedBy(12.dp)
+                    ) {
+                        items(currentState.bookings) { booking ->
+                            BookingItem(
+                                booking = booking,
+                                onCancel = { viewModel.cancelBooking(booking.id) },
+                                onCheckin = { viewModel.checkinBooking(booking.id) }
+                            )
                         }
                     }
                 }
